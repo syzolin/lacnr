@@ -73,16 +73,13 @@ hook OnDialogResponse( playerid, dialogid, response, listitem, inputtext[ ] )
             {
                 static
                 	szHashed[ 129 ],
-                	szSalt[ 25 ],
                 	szIP[ 16 ]
                 ;
-
-             	randomString( szSalt, 24 );
-             	pencrypt( szHashed, sizeof( szHashed ), inputtext, szSalt );
+             	WP_Hash( szHashed, sizeof( szHashed ), inputtext );
 				GetPlayerIp( playerid, szIP, sizeof( szIP ) );
 
 				format( szBigQuery, sizeof( szBigQuery ), "INSERT INTO `USERS` (`NAME`,`PASSWORD`,`SALT`,`IP`,`SCORE`,`CASH`,`ADMINLEVEL`,`BANKMONEY`,`OWNEDHOUSES`,`KILLS`,`DEATHS`,`VIP_PACKAGE`,`OWNEDCARS`,`LASTLOGGED`,`VIP_EXPIRE`,`LAST_SKIN`,`COP_BAN`,`UPTIME`,`ARRESTS`,`FIGHTSTYLE`,`VIPWEP1`,`VIPWEP2`,`VIPWEP3`,`MUTE_TIME`,`WANTEDLVL`,`ROBBERIES`,`PING_IMMUNE`,`FIRES`,`CONTRACTS`,`COP_TUTORIAL`,`JOB`,`LAST_IP`,`ONLINE`) " );
-				format( szBigQuery, sizeof( szBigQuery ), "%s VALUES('%s','%s','%s','%s',0,0,0,0,0,1,1,0,0,%d,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'%s',1)", szBigQuery, mysql_escape( ReturnPlayerName( playerid ) ), szHashed, mysql_escape( szSalt ), mysql_escape( szIP ), g_iTime, mysql_escape( szIP ) );
+				format( szBigQuery, sizeof( szBigQuery ), "%s VALUES('%s','%s',0,'%s',0,0,0,0,0,1,1,0,0,%d,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'%s',1)", szBigQuery, mysql_escape( ReturnPlayerName( playerid ) ), szHashed, mysql_escape( szIP ), g_iTime, mysql_escape( szIP ) );
        			mysql_function_query( dbHandle, szBigQuery, true, "Account_SetAccountID", "d", playerid );
 
                 CallLocalFunction( "OnPlayerRegister", "d", playerid );
@@ -175,36 +172,15 @@ thread OnAttemptPlayerLogin( playerid, password[ ] )
     {
     	new
     		szHashed[ 129 ],
-    		szPassword[ 129 ],
-    		szSalt[ 25 ],
-    		bool: isSalted = false
+    		szPassword[ 129 ]
     	;
 
-		cache_get_field_content( 0,  "SALT", szSalt );
 		cache_get_field_content( 0,  "PASSWORD", szPassword );
-
-		if ( !strcmp( szSalt, "NULL", false ) ) // User doesn't have a salt
-		{
-			WP_Hash( szHashed, sizeof( szHashed ), password );
-			isSalted = false;
-		}
-		else
-		{
-			pencrypt( szHashed, sizeof( szHashed ), password, szSalt );
-			isSalted = true;
-		}
+		
+		WP_Hash( szHashed, sizeof( szHashed ), password );
 
 		if ( ! strcmp( szHashed, szPassword, false ) )
     	{
-    		if ( !isSalted ) // Converting from insecure to secure
-    		{
-             	randomString( szSalt, 24 );
-             	pencrypt( szHashed, sizeof( szHashed ), password, szSalt );
-
-    			format( szBigString, sizeof( szBigString ), "UPDATE USERS SET `PASSWORD`='%s', `SALT`='%s' WHERE `NAME`='%s'", szHashed, mysql_escape( szSalt ), ReturnPlayerName( playerid ) );
-    			mysql_single_query( szBigString );
-    		}
-
     		p_AccountID[ playerid ] = cache_get_field_content_int( 0, "ID", dbHandle );
 
 			new iScore 		= cache_get_field_content_int( 0, "SCORE", dbHandle );
