@@ -1,0 +1,7 @@
+---------------------------------
+USER AGREEMENT
+---------------------------------
+
+1. You can re-produce and re-release the plugin/script once full credit is given.
+2. You accept full responsibility for usage of the plugin.
+3. You accept full responsibility for any damages/harm should they occur from usage of this plugin.
