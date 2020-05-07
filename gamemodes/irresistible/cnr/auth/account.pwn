@@ -7,12 +7,18 @@
 
 /* ** Includes ** */
 #include 							< YSI\y_hooks >
+#include                            < bcrypt >
 
 /* ** Variables ** */
 new
     bool: p_PlayerLogged    		[ MAX_PLAYERS char ],
     p_AccountID						[ MAX_PLAYERS ]
 ;
+/* ** Defines ** */
+#define BCRYPT_COST 12 //For BCrypt Password Hashing
+
+/* **Forwards** */
+forward OnPasswordHashed(playerid);
 
 /* ** Hooks ** */
 hook OnPlayerPassedBanCheck( playerid )
@@ -31,9 +37,7 @@ hook OnPlayerDisconnect( playerid, reason )
 
 hook OnDialogResponse( playerid, dialogid, response, listitem, inputtext[ ] )
 {
-    static
-        szBigQuery[ 764 ];
-
+	static szBigQuery[ 764 ];
     if ( dialogid == DIALOG_LOGIN )
     {
         if ( response )
@@ -43,10 +47,9 @@ hook OnDialogResponse( playerid, dialogid, response, listitem, inputtext[ ] )
         		AdvancedBan( playerid, "Server", "Exploiting", ReturnPlayerIP( playerid ) );
         		return SendError( playerid, "You are already logged in!" );
         	}
-
-			format( szBigQuery, sizeof( szBigQuery ), "SELECT * FROM `USERS` WHERE `NAME` = '%s' LIMIT 0,1", mysql_escape( ReturnPlayerName( playerid ) ) );
+            format( szBigQuery, sizeof( szBigQuery ), "SELECT * FROM `USERS` WHERE `NAME` = '%s' LIMIT 0,1", mysql_escape( ReturnPlayerName( playerid ) ) );
        		mysql_function_query( dbHandle, szBigQuery, true, "OnAttemptPlayerLogin", "ds", playerid, inputtext );
-        }
+		 }
         else return ShowPlayerDialog( playerid, DIALOG_LOGIN_QUIT, DIALOG_STYLE_MSGBOX, "{FFFFFF}Account - Authentication", "{FFFFFF}Are you sure you want to leave the server?", "Yes", "No" );
     }
     else if ( dialogid == DIALOG_LOGIN_QUIT ) {
@@ -71,39 +74,7 @@ hook OnDialogResponse( playerid, dialogid, response, listitem, inputtext[ ] )
             }
             else
             {
-                static
-                	szHashed[ 129 ],
-                	szIP[ 16 ]
-                ;
-             	WP_Hash( szHashed, sizeof( szHashed ), inputtext );
-				GetPlayerIp( playerid, szIP, sizeof( szIP ) );
-
-				format( szBigQuery, sizeof( szBigQuery ), "INSERT INTO `USERS` (`NAME`,`PASSWORD`,`SALT`,`IP`,`SCORE`,`CASH`,`ADMINLEVEL`,`BANKMONEY`,`OWNEDHOUSES`,`KILLS`,`DEATHS`,`VIP_PACKAGE`,`OWNEDCARS`,`LASTLOGGED`,`VIP_EXPIRE`,`LAST_SKIN`,`COP_BAN`,`UPTIME`,`ARRESTS`,`FIGHTSTYLE`,`VIPWEP1`,`VIPWEP2`,`VIPWEP3`,`MUTE_TIME`,`WANTEDLVL`,`ROBBERIES`,`PING_IMMUNE`,`FIRES`,`CONTRACTS`,`COP_TUTORIAL`,`JOB`,`LAST_IP`,`ONLINE`) " );
-				format( szBigQuery, sizeof( szBigQuery ), "%s VALUES('%s','%s',0,'%s',0,0,0,0,0,1,1,0,0,%d,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'%s',1)", szBigQuery, mysql_escape( ReturnPlayerName( playerid ) ), szHashed, mysql_escape( szIP ), g_iTime, mysql_escape( szIP ) );
-       			mysql_function_query( dbHandle, szBigQuery, true, "Account_SetAccountID", "d", playerid );
-
-                CallLocalFunction( "OnPlayerRegister", "d", playerid );
-
-				p_JobSet{ playerid } = false;
-				//p_CitySet{ playerid } = false;
-				p_SpawningCity{ playerid } = CITY_SF;
-
-				p_Uptime[ playerid ] = 0;
-				ShowAchievement( playerid, "Registering to SF-CnR!", 1 );
-                p_PlayerLogged{ playerid } = true;
-                SetPlayerCash( playerid, 5000 );
-                SetPlayerScore( playerid, 0 );
-				p_Kills[ playerid ] = 1;
-				p_Deaths[ playerid ] = 1;
-				//p_XP[ playerid ] = 0;
-				//p_CopTutorial{ playerid } = 0;
-				p_OwnedHouses[ playerid ] = 0;
-				p_OwnedBusinesses[ playerid ] = 0;
-				p_OwnedVehicles[ playerid ] = 0;
-				p_Burglaries[ playerid ] = 0;
-				p_BobbyPins[ playerid ] = 10;
-				ShowPlayerDialog( playerid, DIALOG_ACC_EMAIL, DIALOG_STYLE_INPUT, "{FFFFFF}Account Email", ""COL_WHITE"Would you like to assign an email to your account for security?\n\nWe'll keep you also informed on in-game and community associated events!", "Confirm", "Cancel" );
-                SendServerMessage( playerid, "You have "COL_GREEN"successfully{FFFFFF} registered! You have been automatically logged in!" );
+                bcrypt_hash(inputtext, BCRYPT_COST, "OnPasswordHashed", "d", playerid);
             }
         }
         else return ShowPlayerDialog( playerid, DIALOG_REGISTER_QUIT, DIALOG_STYLE_MSGBOX, "{FFFFFF}Account - Authentication", "{FFFFFF}Are you sure you want to leave the server?", "Yes", "No" );
@@ -148,9 +119,9 @@ thread OnPlayerDuplicateAccountCheck( playerid )
 
 	cache_get_data( rows, fields );
 
-	if ( rows > 10 )
+	if ( rows > 3 )
 	{
-		SendError( playerid, "Sorry, this IP has more than 10 users registered to it which is the maximum limit of users per IP." );
+		SendError( playerid, "Sorry, this IP has more than 3 users registered to it which is the maximum limit of users per IP." );
 		KickPlayerTimed( playerid );
 	}
 	else
@@ -158,7 +129,44 @@ thread OnPlayerDuplicateAccountCheck( playerid )
         format( szBigString, sizeof( szBigString ), "{FFFFFF}Welcome, this account ("COL_RED"%s"COL_WHITE") is not registered.\nPlease enter your desired password for this account.\n\n"COL_GREY"Once you are registered, do not share your password with anyone besides yourself!", ReturnPlayerName( playerid ) );
         ShowPlayerDialog( playerid, DIALOG_REGISTER, DIALOG_STYLE_INPUT, "{FFFFFF}Account - Register", szBigString, "Register", "Leave" );
 	}
-	return 1;
+    return 1;
+}
+public OnPasswordHashed(playerid)
+{
+                static szBigQuery[ 764 ],
+                	szIP[ 16 ]
+                ;
+                new hash[BCRYPT_HASH_LENGTH];
+	            bcrypt_get_hash(hash);
+	            GetPlayerIp( playerid, szIP, sizeof( szIP ) );
+                format( szBigQuery, sizeof( szBigQuery ), "INSERT INTO `USERS` (`NAME`,`PASSWORD`,`SALT`,`IP`,`SCORE`,`CASH`,`ADMINLEVEL`,`BANKMONEY`,`OWNEDHOUSES`,`KILLS`,`DEATHS`,`VIP_PACKAGE`,`OWNEDCARS`,`LASTLOGGED`,`VIP_EXPIRE`,`LAST_SKIN`,`COP_BAN`,`UPTIME`,`ARRESTS`,`FIGHTSTYLE`,`VIPWEP1`,`VIPWEP2`,`VIPWEP3`,`MUTE_TIME`,`WANTEDLVL`,`ROBBERIES`,`PING_IMMUNE`,`FIRES`,`CONTRACTS`,`COP_TUTORIAL`,`JOB`,`LAST_IP`,`ONLINE`) " );
+				format( szBigQuery, sizeof( szBigQuery ), "%s VALUES('%s','%s',0,'%s',0,0,0,0,0,1,1,0,0,%d,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,'%s',1)", szBigQuery, mysql_escape( ReturnPlayerName( playerid ) ), hash, mysql_escape( szIP ), g_iTime, mysql_escape( szIP ) );
+       			mysql_function_query( dbHandle, szBigQuery, true, "Account_SetAccountID", "d", playerid );
+
+                CallLocalFunction( "OnPlayerRegister", "d", playerid );
+
+				p_JobSet{ playerid } = false;
+				//p_CitySet{ playerid } = false;
+				p_SpawningCity{ playerid } = CITY_SF;
+
+				p_Uptime[ playerid ] = 0;
+				ShowAchievement( playerid, "Registering to SF-CnR!", 1 );
+                p_PlayerLogged{ playerid } = true;
+                SetPlayerCash( playerid, 5000 );
+                SetPlayerScore( playerid, 0 );
+				p_Kills[ playerid ] = 1;
+				p_Deaths[ playerid ] = 1;
+				//p_XP[ playerid ] = 0;
+				//p_CopTutorial{ playerid } = 0;
+				p_OwnedHouses[ playerid ] = 0;
+				p_OwnedBusinesses[ playerid ] = 0;
+				p_OwnedVehicles[ playerid ] = 0;
+				p_Burglaries[ playerid ] = 0;
+				p_BobbyPins[ playerid ] = 10;
+				ShowPlayerDialog( playerid, DIALOG_ACC_EMAIL, DIALOG_STYLE_INPUT, "{FFFFFF}Account Email", ""COL_WHITE"Would you like to assign an email to your account for security?\n\nWe'll keep you also informed on in-game and community associated events!", "Confirm", "Cancel" );
+                SendServerMessage( playerid, "You have "COL_GREEN"successfully{FFFFFF} registered! You have been automatically logged in!" );
+                return 1;
+
 }
 
 thread OnAttemptPlayerLogin( playerid, password[ ] )
@@ -168,20 +176,45 @@ thread OnAttemptPlayerLogin( playerid, password[ ] )
 	;
     cache_get_data( rows, fields );
 
-    if ( rows )
-    {
-    	new
-    		szHashed[ 129 ],
-    		szPassword[ 129 ]
-    	;
+    new szPassword[ 129 ];
+    cache_get_field_content( 0,  "PASSWORD", szPassword );
+    bcrypt_check(password, szPassword,  "OnPlayerCheckLogin", "d", playerid);
 
-		cache_get_field_content( 0,  "PASSWORD", szPassword );
-		
-		WP_Hash( szHashed, sizeof( szHashed ), password );
+}
 
-		if ( ! strcmp( szHashed, szPassword, false ) )
-    	{
-    		p_AccountID[ playerid ] = cache_get_field_content_int( 0, "ID", dbHandle );
+thread OnPlayerCheckLogin( playerid, password[ ] )
+{
+    new
+	    rows, fields
+	;
+    cache_get_data( rows, fields );
+    static szBigQuery[ 764 ];
+
+    new bool:match = bcrypt_is_equal();
+    if(match)
+ 	        {
+                format( szBigQuery, sizeof( szBigQuery ), "SELECT * FROM `USERS` WHERE `NAME` = '%s' LIMIT 0,1", mysql_escape( ReturnPlayerName( playerid ) ) );
+   		        mysql_function_query( dbHandle, szBigQuery, true, "OnPlayerLoadData", "ds", playerid, password );
+		    }
+	        else
+	        {
+	        p_IncorrectLogins{ playerid } ++;
+	        format( szBigString, sizeof( szBigString ), "{FFFFFF}Welcome, this account ("COL_GREEN"%s"COL_WHITE") is registered.\nPlease enter the password to login.\n\n"COL_RED"Wrong password! Try again! [%d/3]\n\n"COL_GREY"If you are not the owner of this account, leave and rejoin with a different nickname.", ReturnPlayerName( playerid ), p_IncorrectLogins{ playerid } );
+			ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{FFFFFF}Account - Login", szBigString, "Login", "Leave");
+			if ( p_IncorrectLogins{ playerid } >= 3 ) {
+			    p_IncorrectLogins{ playerid } = 0;
+				SendServerMessage( playerid, "You have been kicked for too many incorrect login attempts." );
+				KickPlayerTimed( playerid );
+			}
+	    }
+	return 1;
+}
+
+thread OnPlayerLoadData(playerid , password[ ])
+{
+            new rows, fields;
+            cache_get_data( rows, fields );
+   		    p_AccountID[ playerid ] = cache_get_field_content_int( 0, "ID", dbHandle );
 
 			new iScore 		= cache_get_field_content_int( 0, "SCORE", dbHandle );
 			new iCash 		= cache_get_field_content_int( 0, "CASH", dbHandle );
@@ -289,44 +322,12 @@ thread OnAttemptPlayerLogin( playerid, password[ ] )
 			// Chat Ban Player
 			format( szBigString, sizeof( szBigString ), "SELECT * FROM `CHAT_BANS` WHERE `ID` = '%d' LIMIT 0,1", p_AccountID[ playerid ] );
 			mysql_function_query( dbHandle, szBigString, true, "ChatBanUponLogin", "d", playerid );
-		}
-	    else
-	    {
-	        p_IncorrectLogins{ playerid } ++;
-	        format( szBigString, sizeof( szBigString ), "{FFFFFF}Welcome, this account ("COL_GREEN"%s"COL_WHITE") is registered.\nPlease enter the password to login.\n\n"COL_RED"Wrong password! Try again! [%d/3]\n\n"COL_GREY"If you are not the owner of this account, leave and rejoin with a different nickname.", ReturnPlayerName( playerid ), p_IncorrectLogins{ playerid } );
-			ShowPlayerDialog(playerid, DIALOG_LOGIN, DIALOG_STYLE_PASSWORD, "{FFFFFF}Account - Login", szBigString, "Login", "Leave");
-			if ( p_IncorrectLogins{ playerid } >= 3 ) {
-			    p_IncorrectLogins{ playerid } = 0;
-				SendServerMessage( playerid, "You have been kicked for too many incorrect login attempts." );
-				KickPlayerTimed( playerid );
-			}
-	    }
-    }
-    else
-    {
-    	Kick( playerid );
-    	printf( "User::Error - User Not Created Attempting Login" );
-    }
-	return 1;
 }
 
 thread Account_SetAccountID( playerid )
 {
 	p_AccountID[ playerid ]	= cache_insert_id( );
 	return 1;
-}
-
-/* ** Functions ** */
-stock pencrypt( szLeFinale[ ], iSize = sizeof( szLeFinale ), szPassword[ ], szSalt[ 25 ], iPepper = 24713018, szCost[ 3 ] = "2y" ) // lorenc's hashing algorithm
-{
-	static
-    	szHash[ 256 ];
-
-    WP_Hash( szHash, sizeof( szHash ), szPassword );
-
-    format( szHash, sizeof( szHash ), "%s%d%s$%s$", szSalt, iPepper, szHash, szCost );
-
-    WP_Hash( szLeFinale, iSize, szHash );
 }
 
 stock SavePlayerData( playerid, bool: logout = false )
