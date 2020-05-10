@@ -109,7 +109,6 @@ static stock
 		{ 3, "/countdown", 			"Countdown" },
 		{ 3, "/pingimmune", 		"Making a player immune from ping kicker" },
 		{ 3, "/ban", 				"Banning a player" },
-		{ 3, "/forceac",			"Force a player to use CAC while playing the server" },
 		{ 3, "/bring", 				"Bring a player to you" },
 		{ 3, "/chatbanlist",			"Shows a list of chat-banned players" },
 
@@ -147,7 +146,6 @@ static stock
 		{ 5, "/achangename", 		"Change a players name" },
 		{ 5, "/unbanip", 			"Unbanning a IP address" },
 		{ 5, "/unban", 				"Unban a player from the server" },
-		{ 5, "/unforceac", 			"Unforce a player from using CAC" },
 		{ 5, "/doublexp", 			"Enable/disable double XP" },
 		{ 5, "/toggleviewpm", 		"Toggle to view private messages" },
 		{ 5, "/respawnallv", 		"Respawning all server vehicles" },
@@ -160,7 +158,6 @@ static stock
 		{ 5, "/createhouse", 		"Creating a house" },
 		{ 5, "/destroyhouse", 		"Deleting a house" },
 		{ 5, "/hadminsell", 		"Selling a house (as admin)" },
-		{ 5, "/forceac", 			"Forcing a player to use SAMP-CAC" },
 		{ 5, "/createbusiness", 	"Creates a business" },
 		{ 5, "/destroybusiness", 	"Deletes a business" },
 		{ 5, "/seteventhost",		"Setting event host to player" },

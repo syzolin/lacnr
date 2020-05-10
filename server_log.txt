@@ -7,346 +7,352 @@ SA-MP Dedicated Server
 ----------------------
 v0.3.7-R2, (C)2005-2015 SA-MP Team
 
-[07:29:27] filterscripts = ""  (string)
-[07:29:27] 
-[07:29:27] Server Plugins
-[07:29:27] --------------
-[07:29:27]  Loading plugin: bcrypt-samp.so
-[07:29:27]   plugin.bcrypt v2.2.4 was loaded.
-[07:29:27]   plugin.bcrypt: 1 cores detected, 1 threads will be used.
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: gvar.so
-[07:29:27] 
+[07:17:19] filterscripts = ""  (string)
+[07:17:19] 
+[07:17:19] Server Plugins
+[07:17:19] --------------
+[07:17:19]  Loading plugin: bcrypt-samp.so
+[07:17:19]   plugin.bcrypt v2.2.4 was loaded.
+[07:17:19]   plugin.bcrypt: 1 cores detected, 1 threads will be used.
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: gvar.so
+[07:17:19] 
 
 *** GVar Plugin v1.3 by Incognito loaded ***
 
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: regex.so
-[07:29:27] 
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: regex.so
+[07:17:19] 
 
-[07:29:27] ______________________________________
+[07:17:19] ______________________________________
 
-[07:29:27]  Regular Expression Plugin v0.2.1 loaded
-[07:29:27] ______________________________________
+[07:17:19]  Regular Expression Plugin v0.2.1 loaded
+[07:17:19] ______________________________________
 
-[07:29:27]  By: Fro (c) Copyright <TBG> 2009-2011
-[07:29:27] ______________________________________
+[07:17:19]  By: Fro (c) Copyright <TBG> 2009-2011
+[07:17:19] ______________________________________
 
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: sscanf.so
-[07:29:27] 
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: sscanf.so
+[07:17:19] 
 
-[07:29:27]  ===============================
+[07:17:19]  ===============================
 
-[07:29:27]       sscanf plugin loaded.     
+[07:17:19]       sscanf plugin loaded.     
 
-[07:29:27]          Version:  2.8.2        
+[07:17:19]          Version:  2.8.2        
 
-[07:29:27]    (c) 2012 Alex "Y_Less" Cole  
+[07:17:19]    (c) 2012 Alex "Y_Less" Cole  
 
-[07:29:27]  ===============================
+[07:17:19]  ===============================
 
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: streamer.so
-[07:29:27] 
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: streamer.so
+[07:17:19] 
 
 *** Streamer Plugin v2.9.3 by Incognito loaded ***
 
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: Whirlpool.so
-[07:29:27]  
-[07:29:27]  ==================
-[07:29:27]  
-[07:29:27]   Whirlpool loaded
-[07:29:27]  
-[07:29:27]  ==================
-[07:29:27]  
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: FCNPC.so
-[07:29:27] 
-[07:29:27] -------------------------------------------------
-[07:29:27]      FCNPC - Fully Controllable NPC v1.8.2
-[07:29:27]          GNU/Linux SA-MP 0.3.7 R2
-[07:29:27]           Jan  8 2018 at 01:15:11
-[07:29:27] 
-[07:29:27]   Author:       OrMisicL (2013 - 2015)
-[07:29:27]   Continued by: ziggi (2016 - present)
-[07:29:27]   Contributors: kurta999, Neutralneu
-[07:29:27] -------------------------------------------------
-[07:29:27] 
-[07:29:27] Loading...
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: RouteConnectorPlugin.so
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: mapandreas.so
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: TPoker.so
-[07:29:27] ** TPoker plugin was successfully loaded! ** 
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: merrandom.so
-[07:29:27] Plugin MerRandom v2.1 - by Cyber_Punk got loaded.
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: mysql.so
-[07:29:27]  >> plugin.mysql: R39-6 successfully loaded.
-[07:29:27]   Loaded.
-[07:29:27]  Loading plugin: filemanager.so
-[07:29:27] ******************
-[07:29:27] ** FILE MANAGER **
-[07:29:27] **    Loaded    **
-[07:29:27] ** Version 1.5 **
-[07:29:27] ******************
-[07:29:27]   Loaded.
-[07:29:27]  Loaded 13 plugins.
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: Whirlpool.so
+[07:17:19]  
+[07:17:19]  ==================
+[07:17:19]  
+[07:17:19]   Whirlpool loaded
+[07:17:19]  
+[07:17:19]  ==================
+[07:17:19]  
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: FCNPC.so
+[07:17:19] 
+[07:17:19] -------------------------------------------------
+[07:17:19]      FCNPC - Fully Controllable NPC v1.8.2
+[07:17:19]          GNU/Linux SA-MP 0.3.7 R2
+[07:17:19]           Jan  8 2018 at 01:15:11
+[07:17:19] 
+[07:17:19]   Author:       OrMisicL (2013 - 2015)
+[07:17:19]   Continued by: ziggi (2016 - present)
+[07:17:19]   Contributors: kurta999, Neutralneu
+[07:17:19] -------------------------------------------------
+[07:17:19] 
+[07:17:19] Loading...
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: RouteConnectorPlugin.so
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: mapandreas.so
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: TPoker.so
+[07:17:19] ** TPoker plugin was successfully loaded! ** 
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: merrandom.so
+[07:17:19] Plugin MerRandom v2.1 - by Cyber_Punk got loaded.
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: mysql.so
+[07:17:19]  >> plugin.mysql: R39-6 successfully loaded.
+[07:17:19]   Loaded.
+[07:17:19]  Loading plugin: filemanager.so
+[07:17:19] ******************
+[07:17:19] ** FILE MANAGER **
+[07:17:19] **    Loaded    **
+[07:17:19] ** Version 1.5 **
+[07:17:19] ******************
+[07:17:19]   Loaded.
+[07:17:19]  Loaded 13 plugins.
 
-[07:29:27] 
-[07:29:27] Filterscripts
-[07:29:27] ---------------
-[07:29:27]   Loaded 0 filterscripts.
+[07:17:19] 
+[07:17:19] Filterscripts
+[07:17:19] ---------------
+[07:17:19]   Loaded 0 filterscripts.
 
-[07:29:27] AMX (147911208) loaded
-[07:29:27]  
-[07:29:27]  
-[07:29:27]  
-[07:29:27]  ======================================= 
-[07:29:27]  |                                     | 
-[07:29:27]  |        YSI version 4.00.0001        | 
-[07:29:27]  |        By Alex "Y_Less" Cole        | 
-[07:29:27]  |                                     | 
-[07:29:27]  ======================================= 
-[07:29:27]  
-[07:29:38] [MYSQL]: Connection to database is successful.
-[07:29:38] MapAndreas: plugin could not init!
-[07:29:38] MapAndreas: check files and make sure you have enough memory!
-[07:29:38] [npc:join] [BOT]SexShopClerk0 has joined the server (299:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SexShopClerk1 has joined the server (298:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SexShopClerk2 has joined the server (297:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SexShopClerk3 has joined the server (296:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BettingClerk has joined the server (295:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Zero5 has joined the server (294:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ProlapsClerk6 has joined the server (293:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ProlapsClerk7 has joined the server (292:127.0.0.1)
-[07:29:38] [npc:join] [BOT]DiscoBartender8 has joined the server (291:127.0.0.1)
-[07:29:38] [npc:join] [BOT]DiscoBartender9 has joined the server (290:127.0.0.1)
-[07:29:38] [npc:join] [BOT]RestaurantOwner10 has joined the server (289:127.0.0.1)
-[07:29:38] [npc:join] [BOT]RestaurantOwner11 has joined the server (288:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BrothelManager12 has joined the server (287:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer13 has joined the server (286:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer14 has joined the server (285:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer15 has joined the server (284:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer16 has joined the server (283:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer17 has joined the server (282:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer18 has joined the server (281:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer19 has joined the server (280:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer20 has joined the server (279:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer21 has joined the server (278:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer22 has joined the server (277:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Gunsdealer23 has joined the server (276:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ZIPClerk24 has joined the server (275:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ZIPClerk25 has joined the server (274:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ZIPClerk26 has joined the server (273:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ZIPClerk27 has joined the server (272:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BincoClerk28 has joined the server (271:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BincoClerk29 has joined the server (270:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BincoClerk30 has joined the server (269:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BincoClerk31 has joined the server (268:127.0.0.1)
-[07:29:38] [npc:join] [BOT]VictimClerk32 has joined the server (267:127.0.0.1)
-[07:29:38] [npc:join] [BOT]VictimClerk33 has joined the server (266:127.0.0.1)
-[07:29:38] [npc:join] [BOT]VictimClerk34 has joined the server (265:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SuburbanClerk35 has joined the server (264:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SuburbanClerk36 has joined the server (263:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SuburbanClerk37 has joined the server (262:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender38 has joined the server (261:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender39 has joined the server (260:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender40 has joined the server (259:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender41 has joined the server (258:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender42 has joined the server (257:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender43 has joined the server (256:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender44 has joined the server (255:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender45 has joined the server (254:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender46 has joined the server (253:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender47 has joined the server (252:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender48 has joined the server (251:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender49 has joined the server (250:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender50 has joined the server (249:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender51 has joined the server (248:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender52 has joined the server (247:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Bartender53 has joined the server (246:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker54 has joined the server (245:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker55 has joined the server (244:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker56 has joined the server (243:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker57 has joined the server (242:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker58 has joined the server (241:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker59 has joined the server (240:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker60 has joined the server (239:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker61 has joined the server (238:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker62 has joined the server (237:127.0.0.1)
-[07:29:38] [npc:join] [BOT]BurgerWorker63 has joined the server (236:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker64 has joined the server (235:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker65 has joined the server (234:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker66 has joined the server (233:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker67 has joined the server (232:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker68 has joined the server (231:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker69 has joined the server (230:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker70 has joined the server (229:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker71 has joined the server (228:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker72 has joined the server (227:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker73 has joined the server (226:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker74 has joined the server (225:127.0.0.1)
-[07:29:38] [npc:join] [BOT]ChickenWorker75 has joined the server (224:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker76 has joined the server (223:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker77 has joined the server (222:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker78 has joined the server (221:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker79 has joined the server (220:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker80 has joined the server (219:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker81 has joined the server (218:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker82 has joined the server (217:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker83 has joined the server (216:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker84 has joined the server (215:127.0.0.1)
-[07:29:38] [npc:join] [BOT]PizzaWorker85 has joined the server (214:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker86 has joined the server (213:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker87 has joined the server (212:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker88 has joined the server (211:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker89 has joined the server (210:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker90 has joined the server (209:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker91 has joined the server (208:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker92 has joined the server (207:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker93 has joined the server (206:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker94 has joined the server (205:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker95 has joined the server (204:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker96 has joined the server (203:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker97 has joined the server (202:127.0.0.1)
-[07:29:38] [npc:join] [BOT]247Worker98 has joined the server (201:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber99 has joined the server (200:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber100 has joined the server (199:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber101 has joined the server (198:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber102 has joined the server (197:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber103 has joined the server (196:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber104 has joined the server (195:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Barber105 has joined the server (194:127.0.0.1)
-[07:29:38] [npc:join] [BOT]DonutWorker106 has joined the server (193:127.0.0.1)
-[07:29:38] [npc:join] [BOT]DonutWorker107 has joined the server (192:127.0.0.1)
-[07:29:38] [npc:join] [BOT]DonutWorker108 has joined the server (191:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Stripper109 has joined the server (190:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Stripper110 has joined the server (189:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Otto111 has joined the server (188:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Salesman112 has joined the server (187:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Jizzy113 has joined the server (186:127.0.0.1)
-[07:29:38] [npc:join] [BOT]DidierSachClerk114 has joined the server (185:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SteakhouseOwner115 has joined the server (184:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SteakhouseOwner116 has joined the server (183:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SteakhouseOwner117 has joined the server (182:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SteakhouseOwner118 has joined the server (181:127.0.0.1)
-[07:29:38] [npc:join] [BOT]SteakhouseOwner119 has joined the server (180:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Priest120 has joined the server (179:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Priest121 has joined the server (178:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Priest122 has joined the server (177:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Priest123 has joined the server (176:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Priest124 has joined the server (175:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Priest125 has joined the server (174:127.0.0.1)
-[07:29:38] [npc:join] [BOT]HotelBartender126 has joined the server (173:127.0.0.1)
-[07:29:38] [npc:join] [BOT]VehicleDealer127 has joined the server (172:127.0.0.1)
-[07:29:38] [npc:join] [BOT]VehicleDealer128 has joined the server (171:127.0.0.1)
-[07:29:38] [npc:join] [BOT]VehicleDealer129 has joined the server (170:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Banker130 has joined the server (169:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Banker131 has joined the server (168:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Banker132 has joined the server (167:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Banker133 has joined the server (166:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Pawnbroker134 has joined the server (165:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Pawnbroker135 has joined the server (164:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Pawnbroker136 has joined the server (163:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier137 has joined the server (162:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier138 has joined the server (161:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier139 has joined the server (160:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier140 has joined the server (159:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier141 has joined the server (158:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier142 has joined the server (157:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier143 has joined the server (156:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier144 has joined the server (155:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier145 has joined the server (154:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier146 has joined the server (153:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier147 has joined the server (152:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier148 has joined the server (151:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier149 has joined the server (150:127.0.0.1)
-[07:29:38] [npc:join] [BOT]GasCashier150 has joined the server (149:127.0.0.1)
-[07:29:38] [npc:join] [BOT]TriadBoss151 has joined the server (148:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad0 has joined the server (147:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad1 has joined the server (146:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad2 has joined the server (145:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad3 has joined the server (144:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad4 has joined the server (143:127.0.0.1)
-[07:29:38] [npc:join] [BOT]TriadBoss152 has joined the server (142:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad5 has joined the server (141:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad6 has joined the server (140:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad7 has joined the server (139:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad8 has joined the server (138:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad9 has joined the server (137:127.0.0.1)
-[07:29:38] [npc:join] [BOT]TriadBoss153 has joined the server (136:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad10 has joined the server (135:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad11 has joined the server (134:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad12 has joined the server (133:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad13 has joined the server (132:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad14 has joined the server (131:127.0.0.1)
-[07:29:38] [npc:join] [BOT]TriadBoss154 has joined the server (130:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad15 has joined the server (129:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad16 has joined the server (128:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad17 has joined the server (127:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad18 has joined the server (126:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Triad19 has joined the server (125:127.0.0.1)
-[07:29:38] [npc:join] [BOT]MafiaBoss155 has joined the server (124:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier20 has joined the server (123:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier21 has joined the server (122:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier22 has joined the server (121:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier23 has joined the server (120:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier24 has joined the server (119:127.0.0.1)
-[07:29:38] [npc:join] [BOT]MafiaBoss156 has joined the server (118:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier25 has joined the server (117:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier26 has joined the server (116:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier27 has joined the server (115:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier28 has joined the server (114:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier29 has joined the server (113:127.0.0.1)
-[07:29:38] [npc:join] [BOT]MafiaBoss157 has joined the server (112:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier30 has joined the server (111:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier31 has joined the server (110:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier32 has joined the server (109:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier33 has joined the server (108:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier34 has joined the server (107:127.0.0.1)
-[07:29:38] [npc:join] [BOT]MafiaBoss158 has joined the server (106:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier35 has joined the server (105:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier36 has joined the server (104:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier37 has joined the server (103:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier38 has joined the server (102:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Soldier39 has joined the server (101:127.0.0.1)
-[07:29:38] [npc:join] [BOT]MilitiaBoss has joined the server (100:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia40 has joined the server (99:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia41 has joined the server (98:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia42 has joined the server (97:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia43 has joined the server (96:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia44 has joined the server (95:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia45 has joined the server (94:127.0.0.1)
-[07:29:38] [npc:join] [BOT]Militia46 has joined the server (93:127.0.0.1)
-[07:29:38] [ROBBERIES]: 191 safe robberies have been successfully loaded.
-[07:29:38] [POOL TABLES]: 37 pool tables have been successfully loaded.
-[07:29:39] [npc:join] [BOT]VisageCashier160 has joined the server (92:127.0.0.1)
-[07:29:39] [npc:join] [BOT]VisageCashier161 has joined the server (91:127.0.0.1)
-[07:29:39] -> Boxing System - By: Damen
-[07:29:39] [SF-CNR] SF-CnR has been successfully initialized. (Build: v11.69.216 | Time: 1588850979 | Tickcount: 11978)
-[07:29:39] 
+[07:17:19] AMX (159851048) loaded
+[07:17:19]  
+[07:17:19]  
+[07:17:19]  
+[07:17:19]  ======================================= 
+[07:17:19]  |                                     | 
+[07:17:19]  |        YSI version 4.00.0001        | 
+[07:17:19]  |        By Alex "Y_Less" Cole        | 
+[07:17:19]  |                                     | 
+[07:17:19]  ======================================= 
+[07:17:19]  
+[07:17:32] [MYSQL]: Connection to database is successful.
+[07:17:32] MapAndreas: plugin could not init!
+[07:17:32] MapAndreas: check files and make sure you have enough memory!
+[07:17:32] [npc:join] [BOT]SexShopClerk0 has joined the server (299:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SexShopClerk1 has joined the server (298:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SexShopClerk2 has joined the server (297:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SexShopClerk3 has joined the server (296:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BettingClerk has joined the server (295:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Zero5 has joined the server (294:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ProlapsClerk6 has joined the server (293:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ProlapsClerk7 has joined the server (292:127.0.0.1)
+[07:17:32] [npc:join] [BOT]DiscoBartender8 has joined the server (291:127.0.0.1)
+[07:17:32] [npc:join] [BOT]DiscoBartender9 has joined the server (290:127.0.0.1)
+[07:17:32] [npc:join] [BOT]RestaurantOwner10 has joined the server (289:127.0.0.1)
+[07:17:32] [npc:join] [BOT]RestaurantOwner11 has joined the server (288:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BrothelManager12 has joined the server (287:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer13 has joined the server (286:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer14 has joined the server (285:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer15 has joined the server (284:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer16 has joined the server (283:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer17 has joined the server (282:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer18 has joined the server (281:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer19 has joined the server (280:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer20 has joined the server (279:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer21 has joined the server (278:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer22 has joined the server (277:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Gunsdealer23 has joined the server (276:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ZIPClerk24 has joined the server (275:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ZIPClerk25 has joined the server (274:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ZIPClerk26 has joined the server (273:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ZIPClerk27 has joined the server (272:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BincoClerk28 has joined the server (271:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BincoClerk29 has joined the server (270:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BincoClerk30 has joined the server (269:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BincoClerk31 has joined the server (268:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VictimClerk32 has joined the server (267:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VictimClerk33 has joined the server (266:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VictimClerk34 has joined the server (265:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SuburbanClerk35 has joined the server (264:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SuburbanClerk36 has joined the server (263:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SuburbanClerk37 has joined the server (262:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender38 has joined the server (261:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender39 has joined the server (260:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender40 has joined the server (259:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender41 has joined the server (258:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender42 has joined the server (257:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender43 has joined the server (256:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender44 has joined the server (255:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender45 has joined the server (254:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender46 has joined the server (253:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender47 has joined the server (252:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender48 has joined the server (251:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender49 has joined the server (250:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender50 has joined the server (249:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender51 has joined the server (248:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender52 has joined the server (247:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Bartender53 has joined the server (246:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker54 has joined the server (245:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker55 has joined the server (244:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker56 has joined the server (243:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker57 has joined the server (242:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker58 has joined the server (241:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker59 has joined the server (240:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker60 has joined the server (239:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker61 has joined the server (238:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker62 has joined the server (237:127.0.0.1)
+[07:17:32] [npc:join] [BOT]BurgerWorker63 has joined the server (236:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker64 has joined the server (235:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker65 has joined the server (234:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker66 has joined the server (233:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker67 has joined the server (232:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker68 has joined the server (231:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker69 has joined the server (230:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker70 has joined the server (229:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker71 has joined the server (228:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker72 has joined the server (227:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker73 has joined the server (226:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker74 has joined the server (225:127.0.0.1)
+[07:17:32] [npc:join] [BOT]ChickenWorker75 has joined the server (224:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker76 has joined the server (223:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker77 has joined the server (222:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker78 has joined the server (221:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker79 has joined the server (220:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker80 has joined the server (219:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker81 has joined the server (218:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker82 has joined the server (217:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker83 has joined the server (216:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker84 has joined the server (215:127.0.0.1)
+[07:17:32] [npc:join] [BOT]PizzaWorker85 has joined the server (214:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker86 has joined the server (213:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker87 has joined the server (212:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker88 has joined the server (211:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker89 has joined the server (210:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker90 has joined the server (209:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker91 has joined the server (208:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker92 has joined the server (207:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker93 has joined the server (206:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker94 has joined the server (205:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker95 has joined the server (204:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker96 has joined the server (203:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker97 has joined the server (202:127.0.0.1)
+[07:17:32] [npc:join] [BOT]247Worker98 has joined the server (201:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber99 has joined the server (200:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber100 has joined the server (199:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber101 has joined the server (198:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber102 has joined the server (197:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber103 has joined the server (196:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber104 has joined the server (195:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Barber105 has joined the server (194:127.0.0.1)
+[07:17:32] [npc:join] [BOT]DonutWorker106 has joined the server (193:127.0.0.1)
+[07:17:32] [npc:join] [BOT]DonutWorker107 has joined the server (192:127.0.0.1)
+[07:17:32] [npc:join] [BOT]DonutWorker108 has joined the server (191:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Stripper109 has joined the server (190:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Stripper110 has joined the server (189:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Otto111 has joined the server (188:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Salesman112 has joined the server (187:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Jizzy113 has joined the server (186:127.0.0.1)
+[07:17:32] [npc:join] [BOT]DidierSachClerk114 has joined the server (185:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SteakhouseOwner115 has joined the server (184:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SteakhouseOwner116 has joined the server (183:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SteakhouseOwner117 has joined the server (182:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SteakhouseOwner118 has joined the server (181:127.0.0.1)
+[07:17:32] [npc:join] [BOT]SteakhouseOwner119 has joined the server (180:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Priest120 has joined the server (179:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Priest121 has joined the server (178:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Priest122 has joined the server (177:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Priest123 has joined the server (176:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Priest124 has joined the server (175:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Priest125 has joined the server (174:127.0.0.1)
+[07:17:32] [npc:join] [BOT]HotelBartender126 has joined the server (173:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VehicleDealer127 has joined the server (172:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VehicleDealer128 has joined the server (171:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VehicleDealer129 has joined the server (170:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Banker130 has joined the server (169:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Banker131 has joined the server (168:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Banker132 has joined the server (167:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Banker133 has joined the server (166:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Pawnbroker134 has joined the server (165:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Pawnbroker135 has joined the server (164:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Pawnbroker136 has joined the server (163:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier137 has joined the server (162:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier138 has joined the server (161:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier139 has joined the server (160:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier140 has joined the server (159:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier141 has joined the server (158:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier142 has joined the server (157:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier143 has joined the server (156:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier144 has joined the server (155:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier145 has joined the server (154:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier146 has joined the server (153:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier147 has joined the server (152:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier148 has joined the server (151:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier149 has joined the server (150:127.0.0.1)
+[07:17:32] [npc:join] [BOT]GasCashier150 has joined the server (149:127.0.0.1)
+[07:17:32] [npc:join] [BOT]TriadBoss151 has joined the server (148:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad0 has joined the server (147:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad1 has joined the server (146:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad2 has joined the server (145:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad3 has joined the server (144:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad4 has joined the server (143:127.0.0.1)
+[07:17:32] [npc:join] [BOT]TriadBoss152 has joined the server (142:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad5 has joined the server (141:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad6 has joined the server (140:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad7 has joined the server (139:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad8 has joined the server (138:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad9 has joined the server (137:127.0.0.1)
+[07:17:32] [npc:join] [BOT]TriadBoss153 has joined the server (136:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad10 has joined the server (135:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad11 has joined the server (134:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad12 has joined the server (133:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad13 has joined the server (132:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad14 has joined the server (131:127.0.0.1)
+[07:17:32] [npc:join] [BOT]TriadBoss154 has joined the server (130:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad15 has joined the server (129:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad16 has joined the server (128:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad17 has joined the server (127:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad18 has joined the server (126:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Triad19 has joined the server (125:127.0.0.1)
+[07:17:32] [npc:join] [BOT]MafiaBoss155 has joined the server (124:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier20 has joined the server (123:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier21 has joined the server (122:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier22 has joined the server (121:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier23 has joined the server (120:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier24 has joined the server (119:127.0.0.1)
+[07:17:32] [npc:join] [BOT]MafiaBoss156 has joined the server (118:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier25 has joined the server (117:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier26 has joined the server (116:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier27 has joined the server (115:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier28 has joined the server (114:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier29 has joined the server (113:127.0.0.1)
+[07:17:32] [npc:join] [BOT]MafiaBoss157 has joined the server (112:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier30 has joined the server (111:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier31 has joined the server (110:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier32 has joined the server (109:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier33 has joined the server (108:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier34 has joined the server (107:127.0.0.1)
+[07:17:32] [npc:join] [BOT]MafiaBoss158 has joined the server (106:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier35 has joined the server (105:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier36 has joined the server (104:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier37 has joined the server (103:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier38 has joined the server (102:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Soldier39 has joined the server (101:127.0.0.1)
+[07:17:32] [npc:join] [BOT]MilitiaBoss has joined the server (100:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia40 has joined the server (99:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia41 has joined the server (98:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia42 has joined the server (97:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia43 has joined the server (96:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia44 has joined the server (95:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia45 has joined the server (94:127.0.0.1)
+[07:17:32] [npc:join] [BOT]Militia46 has joined the server (93:127.0.0.1)
+[07:17:32] [ROBBERIES]: 191 safe robberies have been successfully loaded.
+[07:17:32] [POOL TABLES]: 37 pool tables have been successfully loaded.
+[07:17:32] [npc:join] [BOT]VisageCashier160 has joined the server (92:127.0.0.1)
+[07:17:32] [npc:join] [BOT]VisageCashier161 has joined the server (91:127.0.0.1)
+[07:17:32] -> Boxing System - By: Damen
+[07:17:32] [SF-CNR] SF-CnR has been successfully initialized. (Build: v11.69.216 | Time: 1589109452 | Tickcount: 12799)
+[07:17:32] 
 Los Angeles Cops and Robbers [LOCKED] Beta v1.1
 
-[07:29:39] Number of vehicle models: 165
-[07:29:39] [ENTRANCES]: 257 entrances have been loaded. (Tick: 4ms)
-[07:29:39] [HOUSES]: 0 houses have been loaded. (Tick: 0ms)
-[07:29:39] [FURNITURE]: -1 objects have been loaded. (Tick: 0ms)
-[07:29:39] [GARAGES]: -1 garages have been loaded. (Tick: 0ms)
-[07:29:39] [BUSINESSES]: -1 businesses have been loaded. (Tick: 0ms)
-[07:29:39] [BRIBES]: -1 bribes have been loaded. (Tick: 0ms)
-[07:29:39] [GATES]: -1 gates have been loaded. (Tick: 0ms)
-[07:29:39] [FLATS]: -1 apartments have been loaded. (Tick: 0ms)
-[07:29:39] [SERVER] 19 server variables have been loaded.
-[07:29:39] [SLOT MACHINES]: 54 slot machines have been loaded. (Tick: 5ms)
-[07:40:55] [connection] 182.68.78.178:55184 requests connection cookie.
-[07:40:56] [connection] incoming connection: 182.68.78.178:55184 id: 0
-[07:40:57] [join] SkyrantZ has joined the server (0:182.68.78.178)
-[07:41:13] [SkyrantZ] Reading gang id -1
-[07:41:13] [SkyrantZ] Found gang ? NO , id -1, gangid -1
-[07:43:41] [part] SkyrantZ has left the server (0:2)
+[07:17:32] Number of vehicle models: 165
+[07:17:32] [ENTRANCES]: 257 entrances have been loaded. (Tick: 6ms)
+[07:17:32] [HOUSES]: 0 houses have been loaded. (Tick: 0ms)
+[07:17:32] [FURNITURE]: -1 objects have been loaded. (Tick: 0ms)
+[07:17:32] [GARAGES]: -1 garages have been loaded. (Tick: 0ms)
+[07:17:32] [BUSINESSES]: -1 businesses have been loaded. (Tick: 0ms)
+[07:17:32] [BRIBES]: -1 bribes have been loaded. (Tick: 0ms)
+[07:17:32] [GATES]: -1 gates have been loaded. (Tick: 0ms)
+[07:17:32] [FLATS]: -1 apartments have been loaded. (Tick: 0ms)
+[07:17:32] [SERVER] 19 server variables have been loaded.
+[07:17:32] [SLOT MACHINES]: 54 slot machines have been loaded. (Tick: 2ms)
+[07:17:58] [connection] 122.161.150.56:59197 requests connection cookie.
+[07:17:59] [connection] incoming connection: 122.161.150.56:59197 id: 0
+[07:18:00] [join] SkyrantZ has joined the server (0:122.161.150.56)
+[07:18:18] [SkyrantZ] Reading gang id -1
+[07:18:18] [SkyrantZ] Found gang ? NO , id -1, gangid -1
+[07:18:36] [part] SkyrantZ has left the server (0:1)
+[07:21:41] [connection] 122.161.150.56:58559 requests connection cookie.
+[07:21:42] [connection] incoming connection: 122.161.150.56:58559 id: 0
+[07:21:43] [join] SkyrantZ has joined the server (0:122.161.150.56)
+[07:22:06] [SkyrantZ] Reading gang id -1
+[07:22:06] [SkyrantZ] Found gang ? NO , id -1, gangid -1
+[07:27:36] [part] SkyrantZ has left the server (0:1)

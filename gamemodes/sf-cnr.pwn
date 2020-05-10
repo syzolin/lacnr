@@ -1,16 +1,26 @@
 /*
- *
- *      	San Fierro: Cops and Robbers
- *
- * 		Original Creator: Lorenc_
- *		Contributors: Damen, Stev
- *
- *      Thanks to: y_less/zeex/Frosha/Incognito/SA-MP team
- *
- *  Codes:
- *      8hska7082bmahu -> Money Farming Checks
- *      plugins mysql crashdetect sscanf streamer socket Whirlpool regex gvar FileManager profiler FCNPC
+Los Angeles Cops and Robbers (C) 2020
+SkyrantZ 2020 - All Rights Reserved.
 */
+
+// Colors
+#define COLOR_ADMIN  0xFF00FFFF
+#define COLOR_TEAM_LAW 0x000047B2AA
+#define COLOR_DARKOLIVEGREEN 0x556B2FAA
+#define COLOR_FLBLUE 0x6495EDAA
+#define COLOR_DS 0x5ADE8BAA
+#define COLOR_SEAGREEN 0x2E8B57FF
+#define WHITE 0xFFFFFFAA
+#define RED 0xFF0000FF
+#define BLUE 0x000047B2AA
+#define GREEN 0x33AA33AA
+#define LIGHTGREEN 0x24FF0AB9
+#define YELLOW 0xFFFF00FF
+#define PINK 0xFF80C0FF
+#define PURPLE 0x800080AA
+#define LIGHTBLUE 0x0080C0FF
+#define GREY 0xAFAFAFAA
+#define ORANGE 0xFF8000FF
 
 #pragma compat 1
 #pragma option -d3
@@ -72,6 +82,39 @@ public OnServerSecondTick( );
 public OnPlayerLoadTextdraws( playerid );
 public OnPlayerUnloadTextdraws( playerid );
 
+//TEXTDRAWS and MISC. CALLBACKS
+
+// Welcome TextDraw
+new Text:Textdraw0;
+new Text:Textdraw1;
+new Text:Textdraw2;
+new Text:Textdraw3;
+new Text:Textdraw4;
+new Text:Textdraw5;
+new Text:Textdraw6;
+new Text:Textdraw7;
+new Text:Textdraw8;
+new Text:Textdraw9;
+new Text:Textdraw10;
+new Text:Textdraw11;
+new Text:Textdraw12;
+new Text:Textdraw13;
+new Text:Textdraw14;
+new Text:Textdraw15;
+new Text:Textdraw16;
+new Text:Textdraw17;
+// END Of Welcome TextDraw
+
+// Join Panel Textdraws
+new Text:MessagePlayer;
+new MessageStr[170];
+new MessageStrl2[170];
+new MessageStrl3[170];
+new MessageStrl4[170];
+new MessageStrl5[170];
+new MessageStrl6[170];
+// END
+
 main()
 {
 	print( "\n" #SERVER_NAME "\n" );
@@ -79,6 +122,212 @@ main()
 
 public OnGameModeInit()
 {
+
+    // Join Panel Textdraws
+	MessagePlayer = TextDrawCreate(504.375000, 222.250122,"");
+	TextDrawBackgroundColor(MessagePlayer, 255);
+	TextDrawFont(MessagePlayer, 1);
+	TextDrawLetterSize(MessagePlayer, 0.200000, 0.799999);
+	TextDrawColor(MessagePlayer, -1);
+	TextDrawSetOutline(MessagePlayer, 1);
+	TextDrawSetProportional(MessagePlayer, 1);
+	// END
+
+   // Welcome TextDraw
+	Textdraw0 = TextDrawCreate(641.199951, 300.913330, "usebox");
+	TextDrawLetterSize(Textdraw0, 0.000000, 16.110000);
+	TextDrawTextSize(Textdraw0, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw0, 1);
+	TextDrawColor(Textdraw0, 0);
+	TextDrawUseBox(Textdraw0, true);
+	TextDrawBoxColor(Textdraw0, 255);
+	TextDrawSetShadow(Textdraw0, 0);
+	TextDrawSetOutline(Textdraw0, 0);
+	TextDrawFont(Textdraw0, 0);
+
+	Textdraw1 = TextDrawCreate(641.199951, 1.500000, "usebox");
+	TextDrawLetterSize(Textdraw1, 0.000000, 14.865551);
+	TextDrawTextSize(Textdraw1, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw1, 1);
+	TextDrawColor(Textdraw1, 0);
+	TextDrawUseBox(Textdraw1, true);
+	TextDrawBoxColor(Textdraw1, 255);
+	TextDrawSetShadow(Textdraw1, 0);
+	TextDrawSetOutline(Textdraw1, 0);
+	TextDrawBackgroundColor(Textdraw1, 255);
+	TextDrawFont(Textdraw1, 0);
+
+	Textdraw2 = TextDrawCreate(641.199951, 297.180023, "usebox");
+	TextDrawLetterSize(Textdraw2, 0.000000, -0.150738);
+	TextDrawTextSize(Textdraw2, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw2, 1);
+	TextDrawColor(Textdraw2, 0);
+	TextDrawUseBox(Textdraw2, true);
+	TextDrawBoxColor(Textdraw2, 65535);
+	TextDrawSetShadow(Textdraw2, 0);
+	TextDrawSetOutline(Textdraw2, 0);
+	TextDrawFont(Textdraw2, 0);
+
+	Textdraw3 = TextDrawCreate(641.199951, 294.940002, "usebox");
+	TextDrawLetterSize(Textdraw3, 0.000000, -0.482594);
+	TextDrawTextSize(Textdraw3, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw3, 1);
+	TextDrawColor(Textdraw3, 0);
+	TextDrawUseBox(Textdraw3, true);
+	TextDrawBoxColor(Textdraw3, -1);
+	TextDrawSetShadow(Textdraw3, 0);
+	TextDrawSetOutline(Textdraw3, 0);
+	TextDrawFont(Textdraw3, 0);
+
+	Textdraw4 = TextDrawCreate(646.799865, 134.406661, "usebox");
+	TextDrawLetterSize(Textdraw4, 0.000000, 0.018146);
+	TextDrawTextSize(Textdraw4, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw4, 1);
+	TextDrawColor(Textdraw4, 0);
+	TextDrawUseBox(Textdraw4, true);
+	TextDrawBoxColor(Textdraw4, -16776961);
+	TextDrawSetShadow(Textdraw4, 0);
+	TextDrawSetOutline(Textdraw4, 0);
+	TextDrawFont(Textdraw4, 0);
+
+	Textdraw5 = TextDrawCreate(641.199951, 139.633331, "usebox");
+	TextDrawLetterSize(Textdraw5, 0.000000, -0.393702);
+	TextDrawTextSize(Textdraw5, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw5, 1);
+	TextDrawColor(Textdraw5, 0);
+	TextDrawUseBox(Textdraw5, true);
+	TextDrawBoxColor(Textdraw5, -65281);
+	TextDrawSetShadow(Textdraw5, 0);
+	TextDrawSetOutline(Textdraw5, 0);
+	TextDrawFont(Textdraw5, 0);
+
+	Textdraw6 = TextDrawCreate(522.000000, 432.326660, "usebox");
+	TextDrawLetterSize(Textdraw6, 0.000000, -0.316666);
+	TextDrawTextSize(Textdraw6, 115.600006, 0.000000);
+	TextDrawAlignment(Textdraw6, 1);
+	TextDrawColor(Textdraw6, 0);
+	TextDrawUseBox(Textdraw6, true);
+	TextDrawBoxColor(Textdraw6, -1);
+	TextDrawSetShadow(Textdraw6, 0);
+	TextDrawSetOutline(Textdraw6, 0);
+	TextDrawFont(Textdraw6, 0);
+
+	Textdraw7 = TextDrawCreate(578.000000, 412.913330, "usebox");
+	TextDrawLetterSize(Textdraw7, 0.000000, -0.316666);
+	TextDrawTextSize(Textdraw7, 41.200000, 0.000000);
+	TextDrawAlignment(Textdraw7, 1);
+	TextDrawColor(Textdraw7, 0);
+	TextDrawUseBox(Textdraw7, true);
+	TextDrawBoxColor(Textdraw7, -16776961);
+	TextDrawSetShadow(Textdraw7, 0);
+	TextDrawSetOutline(Textdraw7, 0);
+	TextDrawFont(Textdraw7, 0);
+
+	Textdraw8 = TextDrawCreate(44.399997, 412.166687, "usebox");
+	TextDrawLetterSize(Textdraw8, 0.000000, 3.748512);
+	TextDrawTextSize(Textdraw8, 42.799999, 0.000000);
+	TextDrawAlignment(Textdraw8, 1);
+	TextDrawColor(Textdraw8, 0);
+	TextDrawUseBox(Textdraw8, true);
+	TextDrawBoxColor(Textdraw8, -16776961);
+	TextDrawSetShadow(Textdraw8, 0);
+	TextDrawSetOutline(Textdraw8, 0);
+	TextDrawFont(Textdraw8, 0);
+
+	Textdraw9 = TextDrawCreate(582.800048, 412.166687, "usebox");
+	TextDrawLetterSize(Textdraw9, 0.000000, 3.748512);
+	TextDrawTextSize(Textdraw9, 571.599975, 0.000000);
+	TextDrawAlignment(Textdraw9, 1);
+	TextDrawColor(Textdraw9, 0);
+	TextDrawUseBox(Textdraw9, true);
+	TextDrawBoxColor(Textdraw9, -16776961);
+	TextDrawSetShadow(Textdraw9, 0);
+	TextDrawSetOutline(Textdraw9, 0);
+	TextDrawFont(Textdraw9, 0);
+
+	Textdraw10 = TextDrawCreate(215.000000, 434.000000, "www.LACNR.net");
+	TextDrawLetterSize(Textdraw10, 0.418499, 1.267501);
+	TextDrawAlignment(Textdraw10, 1);
+	TextDrawColor(Textdraw10, 16711935);
+	TextDrawSetShadow(Textdraw10, 0);
+	TextDrawSetOutline(Textdraw10, 1);
+	TextDrawBackgroundColor(Textdraw10, 51);
+	TextDrawFont(Textdraw10, 2);
+	TextDrawSetProportional(Textdraw10, 1);
+
+	TextDrawSetProportional(Textdraw10, 1);
+	Textdraw11 = TextDrawCreate(9.199996, 294.193328, "usebox");
+	TextDrawLetterSize(Textdraw11, 0.000000, 16.856666);
+	TextDrawTextSize(Textdraw11, -2.000000, 0.000000);
+	TextDrawAlignment(Textdraw11, 1);
+	TextDrawColor(Textdraw11, 0);
+	TextDrawUseBox(Textdraw11, true);
+	TextDrawBoxColor(Textdraw11, 16711935);
+	TextDrawSetShadow(Textdraw11, 0);
+	TextDrawSetOutline(Textdraw11, 0);
+	TextDrawFont(Textdraw11, 0);
+
+	Textdraw12 = TextDrawCreate(636.399963, 293.446655, "usebox");
+	TextDrawLetterSize(Textdraw12, 0.000000, 16.939630);
+	TextDrawTextSize(Textdraw12, 634.799987, 0.000000);
+	TextDrawAlignment(Textdraw12, 1);
+	TextDrawColor(Textdraw12, 0);
+	TextDrawUseBox(Textdraw12, true);
+	TextDrawBoxColor(Textdraw12, 16711935);
+	TextDrawSetShadow(Textdraw12, 0);
+	TextDrawSetOutline(Textdraw12, 0);
+	TextDrawFont(Textdraw12, 0);
+
+	Textdraw13 = TextDrawCreate(271.500000, 302.750000, "Welcome");
+	TextDrawLetterSize(Textdraw13, 0.587000, 1.976249);
+	TextDrawAlignment(Textdraw13, 1);
+	TextDrawColor(Textdraw13, -65281);
+	TextDrawSetShadow(Textdraw13, 0);
+	TextDrawSetOutline(Textdraw13, 1);
+	TextDrawBackgroundColor(Textdraw13, 255);
+	TextDrawFont(Textdraw13, 3);
+	TextDrawSetProportional(Textdraw13, 1);
+
+	Textdraw14 = TextDrawCreate(303.125000, 322.583343, "To");
+	TextDrawLetterSize(Textdraw14, 0.612000, 1.731249);
+	TextDrawAlignment(Textdraw14, 1);
+	TextDrawColor(Textdraw14, -5963521);
+	TextDrawSetShadow(Textdraw14, 0);
+	TextDrawSetOutline(Textdraw14, 1);
+	TextDrawBackgroundColor(Textdraw14, 255);
+	TextDrawFont(Textdraw14, 3);
+	TextDrawSetProportional(Textdraw14, 1);
+
+	Textdraw15 = TextDrawCreate(122.500000, 338.187500, "LOS ANGELES");
+	TextDrawLetterSize(Textdraw15, 0.502499, 2.606251);
+	TextDrawAlignment(Textdraw15, 1);
+	TextDrawColor(Textdraw15, -1378294017);
+	TextDrawSetShadow(Textdraw15, 0);
+	TextDrawSetOutline(Textdraw15, 1);
+	TextDrawBackgroundColor(Textdraw15, 255);
+	TextDrawFont(Textdraw15, 2);
+	TextDrawSetProportional(Textdraw15, 1);
+
+	Textdraw16 = TextDrawCreate(290.000000, 337.312500, "~b~COPS ~y~& ~r~ROBBERS");
+	TextDrawLetterSize(Textdraw16, 0.597999, 2.684998);
+	TextDrawAlignment(Textdraw16, 1);
+	TextDrawColor(Textdraw16, -1);
+	TextDrawSetShadow(Textdraw16, 0);
+	TextDrawSetOutline(Textdraw16, 1);
+	TextDrawBackgroundColor(Textdraw16, 51);
+	TextDrawFont(Textdraw16, 2);
+	TextDrawSetProportional(Textdraw16, 1);
+
+	Textdraw17 = TextDrawCreate(214.500000, 445.812500, "LD_SPAC:white");
+	TextDrawLetterSize(Textdraw17, 0.000000, 0.000000);
+	TextDrawTextSize(Textdraw17, 209.000000, 3.062500);
+	TextDrawAlignment(Textdraw17, 1);
+	TextDrawColor(Textdraw17, -2139062017);
+	TextDrawSetShadow(Textdraw17, 0);
+	TextDrawSetOutline(Textdraw17, 0);
+	TextDrawFont(Textdraw17, 4);
+	// END
+
 	/* ** Server Variables ** */
 	AddServerVariable( "doublexp", "0", GLOBAL_VARTYPE_INT );
 	AddServerVariable( "eventbank", "0", GLOBAL_VARTYPE_INT );
@@ -410,6 +659,20 @@ public OnNpcConnect( npcid )
 
 public OnPlayerConnect( playerid )
 {
+
+    // Join Panel
+	format(MessageStrl6, 170, MessageStrl5);
+	format(MessageStrl5, 170, MessageStrl4);
+	format(MessageStrl4, 170, MessageStrl3);
+    format(MessageStrl3, 170, MessageStrl2);
+    format(MessageStrl2, 170, MessageStr);
+    format(MessageStr,sizeof MessageStr,"~g~Join: ~w~%s (%d)", ReturnPlayerName(playerid),playerid);
+    new STR[510];
+    format(STR, sizeof(STR), "%s~n~%s~n~%s~n~%s~n~%s", MessageStrl5, MessageStrl4,MessageStrl3, MessageStrl2, MessageStr);
+    TextDrawSetString(MessagePlayer, STR);
+    TextDrawShowForPlayer(playerid, MessagePlayer);
+    //end
+
 	TogglePlayerClock( playerid, 1 );
 	SetPlayerColor( playerid, COLOR_GREY );
 	ResetPlayerCash( playerid );
@@ -601,11 +864,18 @@ public OnPlayerDisconnect( playerid, reason )
 
 	jailDoors( playerid, .remove = true, .set_closed = false );
 
+	//JOIN  Panel
+	format(MessageStrl6, 170, MessageStrl5);
+	format(MessageStrl5, 170, MessageStrl4);
+	format(MessageStrl4, 170, MessageStrl3);
+    format(MessageStrl3, 170, MessageStrl2);
+    format(MessageStrl2, 170, MessageStr);
+
 	switch( reason )
 	{
-	    case 0: color = COLOR_TIMEOUT, 		format( string, sizeof( string ), "%s(%d) has timed out from the server!", ReturnPlayerName( playerid ), playerid );
-	    case 1: color = COLOR_DISCONNECT, 	format( string, sizeof( string ), "%s(%d) has left the server!", ReturnPlayerName( playerid ), playerid );
-	    case 2: color = COLOR_KICK, 		format( string, sizeof( string ), "%s(%d) has been kicked from the server!", ReturnPlayerName( playerid ), playerid );
+	        case 0: format(MessageStr,sizeof MessageStr,"~y~Time: ~w~%s (%d)", ReturnPlayerName(playerid),playerid);
+            case 1: format(MessageStr,sizeof MessageStr,"~r~Quit: ~w~%s (%d)", ReturnPlayerName(playerid),playerid);
+            case 2: format(MessageStr,sizeof MessageStr,"~p~Kick: ~w~%s (%d)", ReturnPlayerName(playerid),playerid);
 	}
 
 
@@ -628,6 +898,28 @@ public OnPlayerDisconnect( playerid, reason )
 
 public OnPlayerSpawn( playerid )
 {
+    // Welcome TextDraw
+    TextDrawHideForPlayer(playerid, Textdraw0);
+    TextDrawHideForPlayer(playerid, Textdraw1);
+    TextDrawHideForPlayer(playerid, Textdraw2);
+    TextDrawHideForPlayer(playerid, Textdraw3);
+    TextDrawHideForPlayer(playerid, Textdraw4);
+    TextDrawHideForPlayer(playerid, Textdraw5);
+    TextDrawHideForPlayer(playerid, Textdraw6);
+    TextDrawHideForPlayer(playerid, Textdraw7);
+    TextDrawHideForPlayer(playerid, Textdraw8);
+    TextDrawHideForPlayer(playerid, Textdraw9);
+    TextDrawHideForPlayer(playerid, Textdraw10);
+    TextDrawHideForPlayer(playerid, Textdraw11);
+    TextDrawHideForPlayer(playerid, Textdraw12);
+    TextDrawHideForPlayer(playerid, Textdraw13);
+    TextDrawHideForPlayer(playerid, Textdraw14);
+    TextDrawHideForPlayer(playerid, Textdraw15);
+    TextDrawHideForPlayer(playerid, Textdraw16);
+    TextDrawHideForPlayer(playerid, Textdraw17);
+    //End Of Welcome TextDraw
+
+
 	new
 		iTick = GetTickCount( );
 
@@ -1618,7 +1910,7 @@ public OnPlayerText( playerid, text[ ] )
 					DCC_SendChannelMessageFormatted( discordChatChan, "**[%s] (VIP) %s(%d):** %s", getCurrentTime(), ReturnPlayerName( playerid ), playerid, text[ 1 ] );
 					SendClientMessageToAllFormatted( 0x3eff3eff, "[VIP] %s(%d):{9ec34f} %s", ReturnPlayerName( playerid ), playerid, text[ 1 ] );
 			        return 0;
-			    }	
+			    }
 			}
 			case '$':
 			{
@@ -2741,7 +3033,7 @@ CMD:labelcolor( playerid, params[ ] )
 {
 	new
 		szLabel[ 7 ];
-	
+
 	if ( sscanf( params, "s[7]", szLabel ) ) return SendUsage( playerid, "/labelcolor [HEX CODE (= normal)]" );
 	else if ( p_VIPLevel[ playerid ] < VIP_REGULAR ) return SendError( playerid, "You are not a V.I.P, to become one visit "COL_GREY"donate.sfcnr.com" );
 	else if ( strmatch( szLabel, "normal" ) )
@@ -2770,7 +3062,7 @@ CMD:changepw( playerid, params[ ] )
 {
 	static
 		szHashed[ 129 ];
-		
+
 	if ( p_accountSecurityData[ playerid ] [ E_ID ] && ! p_accountSecurityData[ playerid ] [ E_VERIFIED ] && p_accountSecurityData[ playerid ] [ E_MODE ] != SECURITY_MODE_DISABLED )
 		return SendError( playerid, "You must be verified in order to use this feature. "COL_YELLOW"(use /verify)" );
 	if ( !p_PlayerLogged{ playerid } ) return SendError( playerid, "You are not logged in." );

@@ -5,6 +5,38 @@
  * Purpose: level one administrator commands (cnr)
  */
 
+enum LACNR_gun_saving
+{
+    gSlot0_gun,
+    gSlot0_ammo,
+    gSlot1_gun,
+    gSlot1_ammo,
+    gSlot2_gun,
+    gSlot2_ammo,
+    gSlot3_gun,
+    gSlot3_ammo,
+    gSlot4_gun,
+    gSlot4_ammo,
+    gSlot5_gun,
+    gSlot5_ammo,
+    gSlot6_gun,
+    gSlot6_ammo,
+    gSlot7_gun,
+    gSlot7_ammo,
+    gSlot8_gun,
+    gSlot8_ammo,
+    gSlot9_gun,
+    gSlot9_ammo,
+    gSlot10_gun,
+    gSlot10_ammo,
+    gSlot11_gun,
+    gSlot11_ammo,
+    gSlot12_gun,
+    gSlot12_ammo,
+}
+new GunInfo[MAX_PLAYERS][LACNR_gun_saving];
+
+
 /* ** Commands ** */
 CMD:viewdeathmsg( playerid, params[ ] )
 {
@@ -156,19 +188,66 @@ CMD:aod( playerid, params[ ] )
 	if ( p_AdminLevel[ playerid ] < 1 ) return SendError( playerid, ADMIN_COMMAND_REJECT );
  	if ( !p_AdminOnDuty{ playerid } )
 	{
+         // Player Weapon Saving System
+	    ResetPlayerWeapons(playerid);
+		GetPlayerWeaponData(playerid, 0, GunInfo[playerid][gSlot0_gun], GunInfo[playerid][gSlot0_ammo]);
+		GetPlayerWeaponData(playerid, 1, GunInfo[playerid][gSlot1_gun], GunInfo[playerid][gSlot1_ammo]);
+		GetPlayerWeaponData(playerid, 2, GunInfo[playerid][gSlot2_gun], GunInfo[playerid][gSlot2_ammo]);
+		GetPlayerWeaponData(playerid, 3, GunInfo[playerid][gSlot3_gun], GunInfo[playerid][gSlot3_ammo]);
+		GetPlayerWeaponData(playerid, 4, GunInfo[playerid][gSlot4_gun], GunInfo[playerid][gSlot4_ammo]);
+		GetPlayerWeaponData(playerid, 5, GunInfo[playerid][gSlot5_gun], GunInfo[playerid][gSlot5_ammo]);
+		GetPlayerWeaponData(playerid, 6, GunInfo[playerid][gSlot6_gun], GunInfo[playerid][gSlot6_ammo]);
+		GetPlayerWeaponData(playerid, 7, GunInfo[playerid][gSlot7_gun], GunInfo[playerid][gSlot7_ammo]);
+		GetPlayerWeaponData(playerid, 8, GunInfo[playerid][gSlot8_gun], GunInfo[playerid][gSlot8_ammo]);
+		GetPlayerWeaponData(playerid, 9, GunInfo[playerid][gSlot9_gun], GunInfo[playerid][gSlot9_ammo]);
+		GetPlayerWeaponData(playerid, 10, GunInfo[playerid][gSlot10_gun], GunInfo[playerid][gSlot10_ammo]);
+		GetPlayerWeaponData(playerid, 11, GunInfo[playerid][gSlot11_gun], GunInfo[playerid][gSlot11_ammo]);
+		GetPlayerWeaponData(playerid, 12, GunInfo[playerid][gSlot12_gun], GunInfo[playerid][gSlot12_ammo]);
+		// END
 		TextDrawShowForPlayer( playerid, g_AdminOnDutyTD );
+		SetPVarInt(playerid, "pSkin", GetPlayerSkin(playerid));
 	    Delete3DTextLabel( p_AdminLabel[ playerid ] );
 	    p_AdminLabel[ playerid ] = Create3DTextLabel( "Admin on Duty!", COLOR_PINK, 0.0, 0.0, 0.0, 15.0, 0 );
 	    Attach3DTextLabelToPlayer( p_AdminLabel[ playerid ], playerid, 0.0, 0.0, 0.5 );
 	    SetPlayerHealth( playerid, INVALID_PLAYER_ID );
+	    SetPlayerSkin(playerid, 217);
+        SetPlayerColor(playerid,COLOR_ADMIN);
 	    DisableRemoteVehicleCollisions( playerid, 1 );
 	    p_AdminOnDuty{ playerid } = true;
+	    SetPlayerHealth(playerid, 99999);
+        SetPlayerArmour(playerid,100000);
+		GivePlayerWeapon(playerid,16,100000);
+		GivePlayerWeapon(playerid,24,100000);
+		GivePlayerWeapon(playerid,26,100000);
+		GivePlayerWeapon(playerid,38,100000);
+		GivePlayerWeapon(playerid,18,100000);
+		GivePlayerWeapon(playerid,28,100000);
+		GivePlayerWeapon(playerid,43,100000);
+		GivePlayerWeapon(playerid,34,100000);
+		GivePlayerWeapon(playerid,31,100000);
 	    SendClientMessage( playerid, -1, ""COL_PINK"[ADMIN]"COL_WHITE" You have enabled administration mode." );
 	}
 	else
 	{
+        /*// Player Weapon Saving System
+		ResetPlayerWeapons(playerid);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot0_gun], GunInfo[playerid][gSlot0_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot1_gun], GunInfo[playerid][gSlot1_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot2_gun], GunInfo[playerid][gSlot2_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot3_gun], GunInfo[playerid][gSlot3_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot4_gun], GunInfo[playerid][gSlot4_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot5_gun], GunInfo[playerid][gSlot5_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot6_gun], GunInfo[playerid][gSlot6_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot7_gun], GunInfo[playerid][gSlot7_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot8_gun], GunInfo[playerid][gSlot8_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot9_gun], GunInfo[playerid][gSlot9_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot10_gun], GunInfo[playerid][gSlot10_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot11_gun], GunInfo[playerid][gSlot11_ammo]);
+		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot12_gun], GunInfo[playerid][gSlot12_ammo]);
+		// END*/
 		TextDrawHideForPlayer( playerid, g_AdminOnDutyTD );
 	    Delete3DTextLabel( p_AdminLabel[ playerid ] );
+	    SetPlayerSkin(playerid, GetPVarInt(playerid, "pSkin"));
 	    p_AdminLabel[ playerid ] = Text3D: INVALID_3DTEXT_ID;
 	    p_AdminOnDuty{ playerid } = false;
 	    SetPlayerHealth( playerid, 100 );
