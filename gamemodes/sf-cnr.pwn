@@ -687,27 +687,37 @@ public OnPlayerConnect( playerid )
 	// reset jails
 	jailDoors( playerid, false, false );
 
-	SendClientMessage( playerid, 0xa9c4e4ff, "{FF0000}[WARNING]{a9c4e4} The concept in this server and GTA in general may be considered explicit material." );
-	SendClientMessageFormatted( playerid, 0xa9c4e4ff, "{FF0000}[INFO]{a9c4e4} The server is currently operating on version %s.", GetServerVersion( ) );
-
-	if ( IsValidServerVariable( "connectsong" ) )
-	{
-		GetServerVariableString( "connectsong", szNormalString );
-		PlayAudioStreamForPlayer( playerid, szNormalString );
-	}
+	SendClientMessage(playerid, WHITE, "{EE5555}___________________________________________________________________________________");
+	SendClientMessage(playerid, WHITE, "{A9C4E4} Welcome To Los Angeles {4545F2}Cops {FFFFFF}And {F81414}Robbers, {CCCC00}Version: {00FF22}v3.4");
+	SendClientMessage(playerid, RED, "{EE5555}WARNING: {A9C4E4}The content and concept on this server is explicit as with GTA SA.!");
+	SendClientMessage(playerid, LIGHTGREEN, "{CCCC00}Visit Our server Website {F81414}www.MPCNR.com{CCCC00} and forum For more {00FF22}information{CCCC00} about server..");
+	SendClientMessage(playerid, WHITE, "{EE5555}___________________________________________________________________________________");
+    // Welcome TextDraws
+	TextDrawShowForPlayer(playerid, Textdraw0);
+	TextDrawShowForPlayer(playerid, Textdraw1);
+	TextDrawShowForPlayer(playerid, Textdraw2);
+	TextDrawShowForPlayer(playerid, Textdraw3);
+	TextDrawShowForPlayer(playerid, Textdraw4);
+	TextDrawShowForPlayer(playerid, Textdraw5);
+	TextDrawShowForPlayer(playerid, Textdraw6);
+	TextDrawShowForPlayer(playerid, Textdraw7);
+	TextDrawShowForPlayer(playerid, Textdraw8);
+	TextDrawShowForPlayer(playerid, Textdraw9);
+	TextDrawShowForPlayer(playerid, Textdraw10);
+	TextDrawShowForPlayer(playerid, Textdraw11);
+	TextDrawShowForPlayer(playerid, Textdraw12);
+	TextDrawShowForPlayer(playerid, Textdraw13);
+	TextDrawShowForPlayer(playerid, Textdraw14);
+	TextDrawShowForPlayer(playerid, Textdraw15);
+	TextDrawShowForPlayer(playerid, Textdraw16);
+	TextDrawShowForPlayer(playerid, Textdraw17);
+	// END
 	return 1;
 }
 
 public OnLookupComplete( playerid, success )
 {
 	SendDeathMessage( INVALID_PLAYER_ID, playerid, 200 );
-
-	if ( IsProxyEnabledForPlayer( playerid ) ) {
-		format( szNormalString, sizeof( szNormalString ), "%s(%d) has connected to the server! (%s)", ReturnPlayerName( playerid ), playerid, GetPlayerCountryName( playerid ) );
-	} else {
-		format( szNormalString, sizeof( szNormalString ), "%s(%d) has connected to the server!", ReturnPlayerName( playerid ), playerid );
-	}
-
 	foreach ( new i : Player ) if ( IsPlayerSettingToggled( i, SETTING_CONNECTION_LOG ) ) {
 		SendClientMessage( i, COLOR_CONNECT, szNormalString );
 	}

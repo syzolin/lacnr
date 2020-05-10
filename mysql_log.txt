@@ -1,14 +1,12 @@
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:17:32 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
-[07:18:18 05/10/20] [WARNING] cache_get_data - no active cache
-[07:21:55 05/10/20] [WARNING] cache_get_data - no active cache
-[07:22:06 05/10/20] [WARNING] cache_get_data - no active cache
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[12:59:29 05/10/20] [ERROR] cache_get_field_content_float - invalid datatype
+[13:00:40 05/10/20] [WARNING] cache_get_data - no active cache
