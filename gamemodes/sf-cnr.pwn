@@ -84,6 +84,8 @@ public OnPlayerUnloadTextdraws( playerid );
 
 //TEXTDRAWS and MISC. CALLBACKS
 
+
+
 // Welcome TextDraw
 new Text:Textdraw0;
 new Text:Textdraw1;
@@ -1261,6 +1263,12 @@ public OnPlayerWeaponShot( playerid, weaponid, hittype, hitid, Float: fX, Float:
 		CreateExplosiveBullet( playerid, hittype, hitid );
 	}
     return 1;
+}
+
+stock BanExWithMessage(playerid, color, message[], reason[])
+{
+    SendClientMessage(playerid, color, message);
+    SetTimerEx("BanExPublic", 1000, false, "ds", playerid, reason);
 }
 
 stock CreateExplosiveBullet( playerid, hittype = BULLET_HIT_TYPE_OBJECT, hitid = INVALID_OBJECT_ID ) {

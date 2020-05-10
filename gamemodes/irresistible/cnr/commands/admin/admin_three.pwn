@@ -487,9 +487,7 @@ CMD:pingimmune( playerid, params[ ] )
 CMD:ban( playerid, params [ ] )
 {
     new
-	    pID,
-		reason[ 50 ]
-	;
+	    pID, reason[ 50 ], fstr[2500], fstr2[2500];
 	if ( p_AdminLevel[ playerid ] < 3 ) return SendError( playerid, ADMIN_COMMAND_REJECT );
 	else if ( sscanf( params, """u""S(No Reason)[50]", pID, reason ) ) return SendUsage( playerid, "/ban [PLAYER_ID] [REASON]" );
 	else if ( !IsPlayerConnected( pID ) || IsPlayerNPC( pID ) ) return SendError( playerid, "Invalid Player ID." );
@@ -499,7 +497,16 @@ CMD:ban( playerid, params [ ] )
 	{
 		adhereBanCodes( reason );
         AddAdminLogLineFormatted( "%s(%d) has banned %s(%d)", ReturnPlayerName( playerid ), playerid, ReturnPlayerName( pID ), pID );
-	    SendGlobalMessage( -1, ""COL_PINK"[ADMIN]{FFFFFF} %s has banned %s(%d) "COL_GREEN"[REASON: %s]", ReturnPlayerName( playerid ), ReturnPlayerName( pID ), pID, reason );
+        format(fstr, sizeof(fstr), "ADMIN BAN: %s (%d) Has Been Banned From The Server - %s", ReturnPlayerName(playerid), pID, reason);
+        SendClientMessageToAll(COLOR_ADMIN, fstr);
+        GameTextForPlayer(pID, "~r~YOU HAVE BEEN ~p~BANNED ~r~FROM THE~n~~r~SERVER.", 25000, 3);
+        format(fstr2, sizeof(fstr2), "You Have Been Banned From The Server By Server Admin - %s", reason);
+        SendClientMessage(pID, RED, fstr2);
+        SetPlayerInterior(pID, 3);
+		SetPlayerPos(pID, 193.5904,175.7956,1003.0234);
+		SetPlayerFacingAngle(pID,357.7934);
+		SetCameraBehindPlayer(pID);
+        BanExWithMessage(pID, RED, "If you think this ban is unfair post an appeal at www.lacnr.NET", "Request");
 		AdvancedBan( pID, ReturnPlayerName( playerid ), reason, ReturnPlayerIP( pID ) );
 	}
 	return 1;

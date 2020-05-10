@@ -206,12 +206,13 @@ CMD:aod( playerid, params[ ] )
 		// END
 		TextDrawShowForPlayer( playerid, g_AdminOnDutyTD );
 		SetPVarInt(playerid, "pSkin", GetPlayerSkin(playerid));
+		SetPVarInt(playerid, "pColor", GetPlayerColor(playerid));
 	    Delete3DTextLabel( p_AdminLabel[ playerid ] );
-	    p_AdminLabel[ playerid ] = Create3DTextLabel( "Admin on Duty!", COLOR_PINK, 0.0, 0.0, 0.0, 15.0, 0 );
+	    p_AdminLabel[ playerid ] = Create3DTextLabel( "Admin on Duty!", COLOR_ADMIN, 0.0, 0.0, 0.0, 15.0, 0 );
 	    Attach3DTextLabelToPlayer( p_AdminLabel[ playerid ], playerid, 0.0, 0.0, 0.5 );
 	    SetPlayerHealth( playerid, INVALID_PLAYER_ID );
 	    SetPlayerSkin(playerid, 217);
-        SetPlayerColor(playerid,COLOR_ADMIN);
+        SetPlayerColor(playerid, COLOR_ADMIN);
 	    DisableRemoteVehicleCollisions( playerid, 1 );
 	    p_AdminOnDuty{ playerid } = true;
 	    SetPlayerHealth(playerid, 99999);
@@ -229,7 +230,7 @@ CMD:aod( playerid, params[ ] )
 	}
 	else
 	{
-        /*// Player Weapon Saving System
+        // Player Weapon Saving System
 		ResetPlayerWeapons(playerid);
 		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot0_gun], GunInfo[playerid][gSlot0_ammo]);
 		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot1_gun], GunInfo[playerid][gSlot1_ammo]);
@@ -244,7 +245,8 @@ CMD:aod( playerid, params[ ] )
 		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot10_gun], GunInfo[playerid][gSlot10_ammo]);
 		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot11_gun], GunInfo[playerid][gSlot11_ammo]);
 		GivePlayerWeapon(playerid, GunInfo[playerid][gSlot12_gun], GunInfo[playerid][gSlot12_ammo]);
-		// END*/
+		// END
+		SetPlayerColor(playerid, GetPVarInt(playerid, "pColor"));
 		TextDrawHideForPlayer( playerid, g_AdminOnDutyTD );
 	    Delete3DTextLabel( p_AdminLabel[ playerid ] );
 	    SetPlayerSkin(playerid, GetPVarInt(playerid, "pSkin"));
@@ -486,8 +488,7 @@ CMD:warn( playerid, params[ ] )
 {
 	new
 	    pID,
-	    reason[ 32 ]
-	;
+	    reason[ 32 ], fstr[2500];
 	if ( p_AdminLevel[ playerid ] < 1 ) return SendError( playerid, ADMIN_COMMAND_REJECT );
 	else if ( sscanf( params, "uS(No Reason)[32]", pID, reason ) ) return SendUsage( playerid, "/warn [PLAYER_ID] [REASON]" );
     else if ( !IsPlayerConnected( pID ) || IsPlayerNPC( pID ) ) return SendError( playerid, "Invalid Player ID." );
@@ -503,7 +504,8 @@ CMD:warn( playerid, params[ ] )
 	    p_Warns[ pID ] ++;
 		GameTextForPlayer( pID, "~r~WARNED!", 4000, 4 );
 	    AddAdminLogLineFormatted( "%s(%d) has warned %s(%d) [%d/3]", ReturnPlayerName( playerid ), playerid, ReturnPlayerName( pID ), pID, p_Warns[ pID ] );
-        SendGlobalMessage( -1, ""COL_PINK"[ADMIN]"COL_WHITE" %s(%d) has been warned by %s(%d) "COL_GREEN"[REASON: %s]", ReturnPlayerName( pID ), pID, ReturnPlayerName( playerid ), playerid, reason );
+        format(fstr, sizeof(fstr), "ADMIN WARN : %s (%d) Has Been Warned By Server Administrator - %s - [ Warn %s/3 ]", ReturnPlayerName(pID), pID, reason, p_Warns[pID]);
+ 	    SendClientMessageToAll(COLOR_ADMIN, fstr);
 		if ( p_Warns[ pID ] >= 3 )
 	    {
 	        p_Warns[ pID ] = 0;

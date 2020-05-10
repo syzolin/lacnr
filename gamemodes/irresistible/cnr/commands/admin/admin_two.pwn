@@ -4,6 +4,10 @@
  * Module: cnr/commands/admin/admin_two.pwn
  * Purpose: level two administrator commands (cnr)
  */
+ 
+ // Use Me Textdraw
+new Text:Textdrawuseme0[MAX_PLAYERS];
+// END
 
 /* ** Commands ** */
 CMD:smlog( playerid, params[ ] )
@@ -95,7 +99,7 @@ CMD:arenas( playerid, params[ ] )
 
 CMD:explode( playerid, params[ ] )
 {
-    new pID, Float: offset;
+    new pID, Float: offset, fstr[2500];
 	if ( p_AdminLevel[ playerid ] < 2 ) return SendError( playerid, ADMIN_COMMAND_REJECT );
     else if (sscanf( params, "uF(0.0)", pID, offset)) SendUsage(playerid, "/explode [PLAYER_ID] [VEHICLE OFFSET (= 0.0)]");
     else if ( !IsPlayerConnected(pID) ) return SendError(playerid, "Invalid Player ID.");
@@ -104,7 +108,8 @@ CMD:explode( playerid, params[ ] )
         new Float: X, Float: Y, Float: Z;
         GetPlayerPos( pID, X, Y, Z );
 		AddAdminLogLineFormatted( "%s(%d) has exploded %s(%d)", ReturnPlayerName( playerid ), playerid, ReturnPlayerName( pID ), pID );
-        SendClientMessageFormatted( playerid, -1, ""COL_PINK"[ADMIN]"COL_WHITE" You have exploded %s(%d)", ReturnPlayerName( pID ), pID );
+        format(fstr, sizeof(fstr), "**Admin Explode: %s (%d) Has Been Died From a Huge Explosion", ReturnPlayerName(pID), pID);
+        SendClientMessageToAll(COLOR_ADMIN, fstr);
 
         if ( IsPlayerInAnyVehicle( pID ) )
         {
@@ -115,6 +120,7 @@ CMD:explode( playerid, params[ ] )
         }
 
         CreateExplosion( X, Y, Z, 12, 10.0 );
+        SetPlayerHealth(pID, 0.0);
     }
     return 1;
 }
@@ -242,8 +248,7 @@ CMD:kick( playerid, params[ ] )
 {
     new
         pID,
-        reason[ 70 ]
-	;
+        reason[ 70 ] , fstr[2500], fstringz[250];
 
 	if ( p_AdminLevel[ playerid ] < 2 ) return SendError( playerid, ADMIN_COMMAND_REJECT );
     else if ( sscanf( params, "uS(No reason)[70]", pID, reason ) ) SendUsage( playerid, "/kick [PLAYER_ID] [REASON]" );
@@ -254,8 +259,22 @@ CMD:kick( playerid, params[ ] )
 	{
 		adhereBanCodes( reason );
 		AddAdminLogLineFormatted( "%s(%d) has kicked %s(%d)", ReturnPlayerName( playerid ), playerid, ReturnPlayerName( pID ), pID );
-        SendGlobalMessage( -1, ""COL_PINK"[ADMIN]{FFFFFF} %s has been kicked by %s. "COL_GREEN"[REASON: %s]", ReturnPlayerName(pID), ReturnPlayerName( playerid ), reason);
-        KickPlayerTimed( pID );
+		format(fstr, sizeof(fstr), "ADMIN KICK : %s (%d) Has Been Kicked From The Server - %s", ReturnPlayerName(pID), pID, reason);
+        SendClientMessageToAll(COLOR_ADMIN, fstr);
+     	// Showing Textdraws
+		new usemetext[124];
+		format(usemetext, sizeof(usemetext), "~r~YOU HAVE BEEN ~p~KICKED ~r~FROM THE~n~~r~SERVER.");
+		TextDrawSetString(Textdrawuseme0[pID], usemetext);
+		TextDrawShowForPlayer(pID, Textdrawuseme0[pID]);
+		SetTimerEx("EndAntiSpawnKill", 25000, false, "i", pID);
+		// END
+		SetPlayerInterior(pID, 3);
+		SetPlayerPos(pID, 193.5904,175.7956,1003.0234);
+		SetPlayerFacingAngle(pID,357.7934);
+		SetCameraBehindPlayer(pID);
+     	SendClientMessage(pID,COLOR_ADMIN, fstringz);
+     	SetTimerEx("KickPlayer",100,false,"i",pID);
+     	// END
     }
     return 1;
 }
